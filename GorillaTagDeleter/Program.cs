@@ -16,8 +16,6 @@ class Program
 
         Console.Clear();
 
-        
-
         if (!IsRunningAsAdmin())
         {
             Console.WriteLine("You need to run the app as admin.");
@@ -51,6 +49,10 @@ class Program
         DeleteFolder(appDataFolder);
 
         DeleteRegistryKey(registryKeyPath);
+
+        DeleteRegistryKey($"HKEY_CURRENT_USER\\Software\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache\\" + userGorillaTagFolder + "\\Gorilla Tag.exe.FriendlyAppName");
+
+        DeleteRegistryKey("Computer\\HKEY_CURRENT_USER\\Software\\Valve\\Steam\\Apps\\1533390");
 
         Console.WriteLine("Do you want to reinstall Gorilla Tag (Y/n): ");
         string reinstallGame = Console.ReadLine();
