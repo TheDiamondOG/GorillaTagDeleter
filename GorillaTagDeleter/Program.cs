@@ -26,7 +26,7 @@ class Program
         DeleteSteamGame(1533390);
 
         string defaultGorillaTagFolder = @"C:\Program Files (x86)\Steam\steamapps\common\Gorilla Tag";
-        string appDataFolder = @"C:\Users\xande\AppData\LocalLow\Another Axiom";
+        string appDataFolder = @"C:\Users\%USER%\AppData\LocalLow\Another Axiom";
         string registryKeyPath = @"Software\Another Axiom";
 
         Console.WriteLine("Enter the path to the Gorilla Tag folder (C:\\Program Files (x86)\\Steam\\steamapps\\common\\Gorilla Tag): ");
